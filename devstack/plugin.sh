@@ -321,7 +321,7 @@ function configure_ceilometer {
     iniset $CEILOMETER_CONF service_credentials username ceilometer
     iniset $CEILOMETER_CONF service_credentials password $SERVICE_PASSWORD
     iniset $CEILOMETER_CONF service_credentials region_name $REGION_NAME
-    iniset $CEILOMETER_CONF service_credentials auth_url $KEYSTONE_SERVICE_URI
+    iniset $CEILOMETER_CONF service_credentials auth_url $KEYSTONE_SERVICE_URI_V3
 
     configure_auth_token_middleware $CEILOMETER_CONF ceilometer $CEILOMETER_AUTH_CACHE_DIR
 
